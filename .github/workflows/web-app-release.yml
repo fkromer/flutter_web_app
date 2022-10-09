@@ -1,0 +1,53 @@
+name: Web App Release
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - '.github/workflows/**'
+      - 'lib/**'
+      - 'test/**'
+  pull_request:
+    branches:
+      - '**'
+    paths:
+      - '.github/workflows/**'
+      - 'lib/**'
+      - 'test/**'
+
+jobs:
+  format:
+    name: 'Format'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.3.4'
+          channel: 'any'
+      - run: flutter format lib && flutter format test
+
+  analyze:
+    name: "Analyze"
+    runs-on: ubuntu-latest
+    needs: format
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.3.4'
+          channel: 'any'
+      - run: flutter format lib && flutter format test
+
+  build:
+    name: "Build"
+    runs-on: ubuntu-latest
+    needs: analyze
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.3.4'
+          channel: 'any'
+      - run: flutter --version && flutter build web -v
