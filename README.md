@@ -38,3 +38,18 @@ Check the setup. The output of `flutter doctor` should contain something indicat
 Run the website with `flutter run -d chrome`, should open a tab in Chrome.
 
 ![](docs/flutter-static-website.png)
+
+## Deployment
+
+This template does support deployment via [GitHub pages](https://pages.github.com).
+
+The deployment uses the ["Creating a custom GitHub Actions workflow to publish your site" workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#creating-a-custom-github-actions-workflow-to-publish-your-site).
+This includes usage of [`actions/upload-pages-artifact`](https://github.com/actions/upload-pages-artifact) and [`actions/deploy-pages`](https://github.com/actions/deploy-pages).
+For more information refer to [`actions/starter-workflows` (pages)](https://github.com/actions/starter-workflows/tree/main/pages) and [`actions/deploy-pages` issue "Error : Invalid actions OIDC token due to sub_invalid #9"](https://github.com/actions/deploy-pages/issues/9)
+
+If you use this template to generate a web app
+
+- for your **personal GitHub account** you need to configure `http(s)://<username>.github.io`,
+- for your **personal GitHub repository** you need to configure 
+`http(s)://<username>.github.io/<your-repo-name>` or
+- for an **GitHub organization repository** you need to configure `http(s)://<orgname>.github.io/<your-repo-name>`.
