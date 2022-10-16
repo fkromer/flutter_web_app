@@ -1,0 +1,18 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Upgrade and run web server
+    init: |
+      flutter upgrade
+      flutter update-packages --force-upgrade
+      flutter run --web-port 8080
+
+ports:
+  - port: 8080
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - Dart-Code.flutter
+    - Dart-Code.dart-code

@@ -2,7 +2,26 @@
 
 GitHub repo template to skaffold amazing web apps and app-like static websites with Flutter on Web.
 
-## Development setup
+## Developmet environment
+
+### Cloud development environment
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/fkromer/flutter_web_app)
+
+> This template uses the [Gitpod pricing plan](https://www.gitpod.io/pricing) "free". It is limited to 50h/month.
+> This means you might not be able to open the cloud development environment in case too many people requested access already.
+
+This template supports cloud development using [Gitpod](https://www.gitpod.io) and providing the
+[VS Code Browser](https://www.gitpod.io/docs/references/ides-and-editors/vscode-browser) IDE.
+It is inspired by [gitpod-io/template-flutter](https://github.com/gitpod-io/template-flutter),
+[gitpod-io/flutter-example](https://github.com/gitpod-io/flutter-example) and
+[vtorres/gitpod-flutter](https://github.com/vtorres/gitpod-flutter).
+
+For best debug experience consider to use Chrome web browser with the
+[Dart Debug Extension](https://chrome.google.com/webstore/detail/dart-debug-extension/eljbmlghnomdjgdjmbdekegdkbabckhm)
+for [Chrome](https://www.google.com/chrome/).
+
+### Local development environment
 
 Install [Flutter](https://flutter.dev) on your platform like described in the Flutter documentation:
 
@@ -40,6 +59,15 @@ Run the website with `flutter run -d chrome`, should open a tab in Chrome.
 ![](docs/flutter-static-website.png)
 
 ## Deployment
+
+### Local build
+
+To [build the web app locally for release](https://docs.flutter.dev/deployment/web#building-the-app-for-release)
+run `flutter build web`. This will build files into `build/web`. Those files can be deployed to various hosting
+options (Netlify, AWS S3, etc.). The bulid uses the [default web renderer `auto`](https://docs.flutter.dev/development/platform-integration/web/renderers#command-line-options)
+which selects the renderer optimal for the browser in use (mobile browser vs. desktop browser).
+
+### WORK IN PROGRESS: GitHub pages
 
 This template does support deployment via [GitHub pages](https://pages.github.com).
 
