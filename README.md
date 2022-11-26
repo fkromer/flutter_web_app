@@ -17,9 +17,12 @@ It is inspired by [gitpod-io/template-flutter](https://github.com/gitpod-io/temp
 [gitpod-io/flutter-example](https://github.com/gitpod-io/flutter-example) and
 [vtorres/gitpod-flutter](https://github.com/vtorres/gitpod-flutter).
 
-For best debug experience consider to use Chrome web browser with the
+For best debug experience consider to open this template with GitPod from Chrome web browser with the
 [Dart Debug Extension](https://chrome.google.com/webstore/detail/dart-debug-extension/eljbmlghnomdjgdjmbdekegdkbabckhm)
 for [Chrome](https://www.google.com/chrome/).
+
+To run the example web app execute `flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0`
+in the GitPod terminal.
 
 ### Local development environment
 
