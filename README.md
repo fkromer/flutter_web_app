@@ -24,6 +24,8 @@ for [Chrome](https://www.google.com/chrome/).
 To run the example web app execute `flutter run -d web-server --web-port=8080 --web-hostname=0.0.0.0`
 in the GitPod terminal.
 
+![](docs/example-app-in-gitpod.PNG)
+
 ### Local development environment
 
 Install [Flutter](https://flutter.dev) on your platform like described in the Flutter documentation:
